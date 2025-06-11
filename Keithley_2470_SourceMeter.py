@@ -1,4 +1,16 @@
 # -*- coding: utf-8 -*-
+'''
+To find your Keithley Visa Resource String (using pyvisa) run the following code:
+
+import pyvisa
+
+rm = pyvisa.ResourceManager()
+instruments = rm.list_resources()
+print(instruments)
+    
+'''
+
+
 """
 Created on Wed Jun 11 12:52:53 2025
 
@@ -11,7 +23,7 @@ import matplotlib.pyplot as plt
 
 # Initialize VISA resource manager
 rm = pyvisa.ResourceManager()
-keithley = rm.open_resource("USB0::0x05E6::0x2470::04639665::INSTR")  # Replace with actual USB address
+keithley = rm.open_resource("USB0::0x05E6::0x2470::04639665::INSTR")
 
 volt_logger = []
 current_logger = []
